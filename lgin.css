@@ -1,0 +1,80 @@
+body {
+    background-image: url('./po1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+
+#container {
+    height: 93.3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.form-container {
+    width: 400px;
+    height: 500px;
+    display: none;
+}
+
+@media screen and (max-width:928px) {
+    .form-container {
+        width: 350px;
+        height: 500px;
+        display: none;
+    }
+
+    #container {
+        height: 94.5vh;
+    }
+}
+
+/* @media screen and (max-width: 375px) {
+#container {
+    height: 95.6vh;
+}
+} */
+
+
+
+form {
+    border-radius: 20px;
+    
+}
+
+
+.form-container.active {
+    display: block;
+}
+
+.bttn {
+    border: 0;
+    background: rgb(253, 29, 29);
+    background: linear-gradient(90deg, rgba(253, 29, 29, 1) 5%, rgba(252, 176, 69, 1) 100%);
+    border-radius: 20px;
+    margin-top: 20px;
+
+}
+
+
+.bttn:hover {
+    background: rgba(252, 176, 69, 1);
+    background: linear-gradient(90deg, rgba(252, 176, 69, 1) 5%, rgba(253, 29, 29, 1) 100%);
+}
+
+h1 {
+    color: rgba(253, 29, 29, 1);
+}
+
+.form-control {
+    border-color: rgba(253, 29, 29, 1);
+}
+
+.form-label {
+
+    font-weight: bold;
+}

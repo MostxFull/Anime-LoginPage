@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login&Signup Page</title>
+    <link rel="icon" href="./01.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./lgin.css">
+    
+    <script> 
+    function Swap(n) {
+        document.getElementById('signupForm').classList.remove('active'); //active already a class in Bootstrap that has 'display: block' 
+        document.getElementById('loginForm').classList.remove('active');
+        document.getElementById(n).classList.add('active');
+    }
+    </script>
+</head>
+
+
+<body>
+    <div id="container">
+        <div>
+            <div class="text-center">
+                <button class="btn  btn-dark text-light fw-3" style="border-radius: 20px 20px 0 0; width: 82px;"
+                    onclick="Swap('signupForm')">Sign Up</button>
+                <button class="btn  btn-dark text-light fw-3" style=" border-radius: 20px 20px 0 0; width: 82px; "
+                    onclick="Swap('loginForm')">Login</button>
+            </div>
+            <div class="form-container active" id="signupForm">
+                <form action="t.php" method="POST" class="bg-dark text-light px-5 py-5">
+                    <h1 class="text-center pb-4" style="font-size: xx-large; font-weight: bolder;">SIGN UP</h1>
+                    <div class="mb-3">
+                        <label for="signup-username" class="form-label">Username</label>
+                        <input type="text" id="signup-username" name="username" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="signup-email" class="form-label">Email</label>
+                        <input type="text" id="signup-email" name="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="signup-password" class="form-label">Password</label>
+                        <input type="password" id="signup-password" name="password" class="form-control" required>
+                        <div class="form-text text-secondary">Already have an account? Click "<span class="text-light">
+                                Login</span>"</div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn bttn text-light px-5 fw-bolder">Submit</button>
+                    </div>
+                    <!-- <button type="button" class="col btn btn-success" onclick="window.location.href='../P1/Acceuil.html'" style="float: right;" >Continue as a Visitor</button> -->
+                </form>
+            </div>
+
+            <div class="form-container" id="loginForm">
+                <form action="t.php" method="POST" class="bg-dark px-5 py-5 text-light ">
+                    <h1 class="text-center pb-4" style="font-size: xx-large; font-weight: bolder;">LOGIN</h1>
+                    <div class="mb-3">
+                        <label for="login-username" class="form-label">Username</label>
+                        <input type="text" id="login-username" name="username" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="login-password" class="form-label">Password</label>
+                        <input type="password" id="login-password" name="password" class="form-control " required>
+                        <div class="form-text text-secondary ">Forgot password?</div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn bttn text-light px-5 fw-bolder">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="text-center" style="padding-bottom: 5.3px;">
+    <img src="./00.png" alt="" height="45px">
+</div>
+</body>
+
+
+
+
+
+
+</html>
